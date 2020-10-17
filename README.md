@@ -1,16 +1,27 @@
-# isetechclub
+# ISE Tech Club App
 
-Prototype for ISE Tech Club
+Tech Club application for the department.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## Screenshots
 
-A few resources to get you started if this is your first Flutter project:
+## Home Page
+[![Screenshot-129.png](https://i.postimg.cc/7hk5K9DQ/Screenshot-129.png)](https://postimg.cc/bDmYJQZQ)
+## Notes Page
+[![Screenshot-130.png](https://i.postimg.cc/SRfJ39xQ/Screenshot-130.png)](https://postimg.cc/rRzVtK47)
+## Contact Page
+[![Screenshot-132.png](https://i.postimg.cc/gkGwRggx/Screenshot-132.png)](https://postimg.cc/DmYy3Pkh)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Tech/framework used
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  - Flutter
+  
+  
+## Future Enhancements
+
+  - [x] Contact Page
+  - [ ] Add notes for every sem.
+  - [ ] Tweak Notes Page UI.
+  - [ ] Implement Events Page
+  - [ ] Implement Results page after Result API is created by the team
+
