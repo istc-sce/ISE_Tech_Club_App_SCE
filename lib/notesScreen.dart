@@ -9,9 +9,8 @@ class NotesScreen extends StatefulWidget {
 }
 
 class _NotesScreenState extends State<NotesScreen> {
-  NotesData thirdSem = NotesData(3, ['Data Structures','Analog & Digital Electronics', 'Computer Organization','Software Engineering','Discrete Mathematics'], ['https://drive.google.com/drive/folders/1zEIG2Y2AIscKkuoSt7Kpx3-Gm03qb4ua?usp=sharing','https://drive.google.com/drive/folders/1dTlmo4w5V6hh3Y-rDL0aB_YBqRv_0FDF?usp=sharing','https://drive.google.com/drive/folders/1JvaqHGNLdXhqStYVdFHBMTM37vgjpC0d?usp=sharing','https://drive.google.com/drive/folders/1kCku6G6rEWKQnH8CWEGLqXsJl_j4dkMf?usp=sharing', 'https://drive.google.com/drive/folders/1nn7pGZbDtI4qI0xKfa-nFGD6NSmCSbAY?usp=sharing']);
 
-  NotesData fourthSem = NotesData(4, ['Design Analysis of Algorithm','Operating System','Micro-controller & Micro-processor','Object Oriented Concepts','Data Communications'], ['https://drive.google.com/drive/folders/1DChej1By7ZHhsok8DSY3P8UCgVExapA_?usp=sharing','https://drive.google.com/drive/folders/1EsuRE3XDHIJiwHP5nNhj0LWsMr-SHKRe?usp=sharing','https://drive.google.com/drive/folders/1J4UHQdSHiZzsvfFN4Uz6qr66hWki8BiN?usp=sharing','https://drive.google.com/drive/folders/1l8ifLw3LFNlJFdB7GXQ_-N6BPIO40dsU?usp=sharing','https://drive.google.com/drive/folders/1Z2gPsYFi4PDbCuW42oz6tiBa614Df_ff?usp=sharing']);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,13 +24,39 @@ class _NotesScreenState extends State<NotesScreen> {
             children: <Widget>[
               SizedBox(height: 100),
               SlimyCard(
+                topCardHeight:200,
+                topCardWidget: topCardWidget(physicsCycle.semester),
+                bottomCardWidget: bottomCardWidget(physicsCycle.subjectNames,physicsCycle.pdfURL),
+              ),
+              SizedBox(height: 30),
+              SlimyCard(
+                topCardHeight:200,
+                topCardWidget: topCardWidget(chemistryCycle.semester),
+                bottomCardWidget: bottomCardWidget(chemistryCycle.subjectNames,chemistryCycle.pdfURL),
+              ),
+              SizedBox(height: 30),
+              SlimyCard(
+                topCardHeight:200,
                 topCardWidget: topCardWidget(thirdSem.semester),
                 bottomCardWidget: bottomCardWidget(thirdSem.subjectNames,thirdSem.pdfURL),
               ),
               SizedBox(height: 30),
               SlimyCard(
+                topCardHeight:200,
                 topCardWidget: topCardWidget(fourthSem.semester),
                 bottomCardWidget: bottomCardWidget(fourthSem.subjectNames,fourthSem.pdfURL),
+              ),
+              SizedBox(height: 30),
+              SlimyCard(
+                topCardHeight:200,
+                topCardWidget: topCardWidget(fifthSem.semester),
+                bottomCardWidget: bottomCardWidget(fifthSem.subjectNames,fifthSem.pdfURL),
+              ),
+              SizedBox(height: 30),
+              SlimyCard(
+                topCardHeight:200,
+                topCardWidget: topCardWidget(sixthSem.semester),
+                bottomCardWidget: bottomCardWidget(sixthSem.subjectNames,sixthSem.pdfURL),
               ),
             ],
           );
@@ -41,7 +66,7 @@ class _NotesScreenState extends State<NotesScreen> {
   }
 }
 
-Widget topCardWidget(int semester) {
+Widget topCardWidget(String semester) {
   return Column(
     mainAxisAlignment: MainAxisAlignment.center,
     children: <Widget>[
@@ -52,23 +77,13 @@ Widget topCardWidget(int semester) {
       SizedBox(height: 20),
       Container(
         height: 70,
-        width: 70,
+        width: 100,
         child: Center(
           child: Text(
             semester.toString(),
+            textAlign: TextAlign.center,
             style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold,),
           ),
-        ),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(15),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.1),
-              blurRadius: 20,
-              spreadRadius: 1,
-            ),
-          ],
         ),
       ),
     ],

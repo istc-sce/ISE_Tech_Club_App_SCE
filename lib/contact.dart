@@ -26,7 +26,7 @@ class _ContactPageState extends State<ContactPage> {
   sendMail() async {
     final Uri params = Uri(
       scheme: 'mailto',
-      path: 'ashutosh_14@outlook.com',
+      path: 'istcsce@gmail.com',
       query: 'subject=Query Request from ${_nameControl.text} with contact number ${_phoneControl.text}&body=${_msgControl.text}',
     );
     String  url = params.toString();
@@ -37,6 +37,7 @@ class _ContactPageState extends State<ContactPage> {
     }
 
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -58,8 +59,8 @@ class _ContactPageState extends State<ContactPage> {
                   padding: const EdgeInsets.only(top:40, left: 20.0),
                   child: Text('CONTACT US', style: TextStyle(color: Colors.black45,fontWeight: FontWeight.bold,fontSize: 30),),
                 ),
-                TextFieldWidget(label: 'Enter Name',controllerName: _nameControl,),
-                TextFieldWidget(label: 'Enter Phone No',controllerName: _phoneControl,),
+                TextFieldWidget(label: 'Enter Name',controllerName: _nameControl,textInputType: TextInputType.name,),
+                TextFieldWidget(label: 'Enter Phone No',controllerName: _phoneControl,textInputType: TextInputType.phone,),
                 TextFieldWidget(label: 'Type your message',maxLines: 6,controllerName: _msgControl,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,

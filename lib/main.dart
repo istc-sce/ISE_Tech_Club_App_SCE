@@ -1,8 +1,7 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:isetechclub/contact.dart';
-import 'package:isetechclub/widgets/carousel.dart';
+import 'package:isetechclub/team.dart';
 
 
 import 'homePage.dart';
@@ -67,6 +66,10 @@ class _MyHomeState extends State<MyHome> {
               icon: Icon(Icons.note,color: Colors.white,)
           ),
           BottomNavyBarItem(
+              title: Text('Team',style: TextStyle(color: Colors.white),),
+              icon: Icon(Icons.wc,color: Colors.white,)
+          ),
+          BottomNavyBarItem(
               title: Text('Contact',style: TextStyle(color: Colors.white),),
               icon: Icon(Icons.contact_page,color: Colors.white,)
           ),
@@ -82,6 +85,7 @@ class _MyHomeState extends State<MyHome> {
                   children:<Widget>[
                     HomePage(),
                     NotesScreen(),
+                    TeamScreen(),
                     ContactPage(),
                   ],
                 ),

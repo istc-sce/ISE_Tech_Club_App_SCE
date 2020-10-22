@@ -4,8 +4,9 @@ class TextFieldWidget extends StatelessWidget {
   final String label;
   final int maxLines;
   final TextEditingController controllerName;
+  final TextInputType textInputType;
 
-  const TextFieldWidget({this.label,this.maxLines, this.controllerName});
+  const TextFieldWidget({this.label,this.maxLines, this.controllerName, this.textInputType});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +32,7 @@ class TextFieldWidget extends StatelessWidget {
             return null;
           }
         },
-        keyboardType: TextInputType.emailAddress,
+        keyboardType: textInputType,
       ),
     );
   }
