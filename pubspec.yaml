@@ -20,6 +20,7 @@ dependencies:
   slimy_card: ^1.0.4
   bottom_navy_bar: ^5.5.0
   url_launcher: ^5.7.5
+  tab_indicator_styler: ^1.0.0
 
 dev_dependencies:
   flutter_test:

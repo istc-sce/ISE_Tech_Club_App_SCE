@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:isetechclub/widgets/teamWidget.dart';
 
@@ -50,68 +51,71 @@ class TeamScreen extends StatelessWidget {
             ],
           ),),
           SizedBox(height: 30,),
-          TeamWidget(label: 'App Development Team',child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+          TeamWidget(label: 'Development Team',child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.all(12),
-                child: Column(
-                  children: [
-                    Container(
-                      width: 150.0,
-                      height: 150.0,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                            fit: BoxFit.cover, image: NetworkImage('https://avatars1.githubusercontent.com/u/69085818?s=460&u=a1345469f63ed7a0bf06716b852b0b60b64ae0f1&v=4')),
-                        borderRadius: BorderRadius.all(Radius.circular(8.0)),
-                      ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(12),
+                    child: Column(
+                      children: [
+                        Container(
+                          width: 150.0,
+                          height: 150.0,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                                fit: BoxFit.cover, image: NetworkImage('https://avatars1.githubusercontent.com/u/69085818?s=460&u=a1345469f63ed7a0bf06716b852b0b60b64ae0f1&v=4')),
+                            borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                          ),
+                        ),
+                        SizedBox(height: 5,),
+                        Text('Ashutosh',style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600),),
+                      ],
                     ),
-                    SizedBox(height: 5,),
-                    Text('Ashutosh',style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600),),
-                  ],
-                ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(12),
+                    child: Column(
+                      children: [
+                        Container(
+                          width: 150.0,
+                          height: 150.0,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                                fit: BoxFit.cover, image: NetworkImage('https://avatars1.githubusercontent.com/u/55646472?s=400&u=14f72c26eb7087a160e0415a30f183001067c92a&v=4')),
+                            borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                          ),
+                        ),
+                        SizedBox(height: 5,),
+                        Text('Pranav N',style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600),),
+                      ],
+                    ),
+                  ),
+                ],
               ),
-            ],
-          ),),
-          SizedBox(height: 30,),
-          TeamWidget(label: 'Web Development Team',child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(12),
-                child: Column(
-                  children: [
-                    Container(
-                      width: 150.0,
-                      height: 150.0,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                            fit: BoxFit.cover, image: NetworkImage('https://avatars1.githubusercontent.com/u/55646472?s=400&u=14f72c26eb7087a160e0415a30f183001067c92a&v=4')),
-                        borderRadius: BorderRadius.all(Radius.circular(8.0)),
-                      ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(12),
+                    child: Column(
+                      children: [
+                        Container(
+                          width: 150.0,
+                          height: 150.0,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                                fit: BoxFit.cover, image: NetworkImage('https://avatars2.githubusercontent.com/u/72809868?s=400&u=510f2f375b361075ef4074df20195c406e87b51f&v=4')),
+                            borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                          ),
+                        ),
+                        SizedBox(height: 5,),
+                        Text('MAHADEVI N C',style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600),),
+                      ],
                     ),
-                    SizedBox(height: 5,),
-                    Text('Pranav N',style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600),),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(12),
-                child: Column(
-                  children: [
-                    Container(
-                      width: 150.0,
-                      height: 150.0,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                            fit: BoxFit.cover, image: NetworkImage('https://avatars2.githubusercontent.com/u/72809868?s=400&u=510f2f375b361075ef4074df20195c406e87b51f&v=4')),
-                        borderRadius: BorderRadius.all(Radius.circular(8.0)),
-                      ),
-                    ),
-                    SizedBox(height: 5,),
-                    Text('MAHADEVI N C',style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600),),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ],
           ),),

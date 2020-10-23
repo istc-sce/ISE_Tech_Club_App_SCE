@@ -16,7 +16,6 @@ class TeamWidget extends StatelessWidget {
           SizedBox(height: 10,),
           Container(
             width: MediaQuery.of(context).size.width,
-            height: 200,
             decoration: BoxDecoration(
               border: Border.all(color: Colors.white),
               borderRadius: BorderRadius.circular(18),

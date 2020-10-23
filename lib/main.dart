@@ -1,6 +1,7 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:isetechclub/contact.dart';
+import 'package:isetechclub/programming.dart';
 import 'package:isetechclub/team.dart';
 
 
@@ -50,6 +51,8 @@ class _MyHomeState extends State<MyHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavyBar(
+        iconSize: 17,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         backgroundColor: Color(0xff251293),
         selectedIndex: _currentIndex,
         onItemSelected: (index) {
@@ -64,6 +67,10 @@ class _MyHomeState extends State<MyHome> {
           BottomNavyBarItem(
               title: Text('Notes',style: TextStyle(color: Colors.white),),
               icon: Icon(Icons.note,color: Colors.white,)
+          ),
+          BottomNavyBarItem(
+              title: Text('Programming',style: TextStyle(color: Colors.white),),
+              icon: Icon(Icons.code,color: Colors.white,)
           ),
           BottomNavyBarItem(
               title: Text('Team',style: TextStyle(color: Colors.white),),
@@ -85,6 +92,7 @@ class _MyHomeState extends State<MyHome> {
                   children:<Widget>[
                     HomePage(),
                     NotesScreen(),
+                    ProgrammingScreen(),
                     TeamScreen(),
                     ContactPage(),
                   ],

@@ -58,6 +58,18 @@ class _NotesScreenState extends State<NotesScreen> {
                 topCardWidget: topCardWidget(sixthSem.semester),
                 bottomCardWidget: bottomCardWidget(sixthSem.subjectNames,sixthSem.pdfURL),
               ),
+              SizedBox(height: 30),
+              SlimyCard(
+                topCardHeight:200,
+                topCardWidget: topCardWidget(seventhSem.semester),
+                bottomCardWidget: bottomCardWidget(seventhSem.subjectNames,seventhSem.pdfURL),
+              ),
+              SizedBox(height: 30),
+              SlimyCard(
+                topCardHeight:200,
+                topCardWidget: topCardWidget(eigthSem.semester),
+                bottomCardWidget: bottomCardWidget(eigthSem.subjectNames,eigthSem.pdfURL),
+              ),
             ],
           );
         }),
