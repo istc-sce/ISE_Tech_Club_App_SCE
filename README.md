@@ -20,7 +20,8 @@ Tech Club application for the department.
 ## Future Enhancements
 
   - [x] Contact Page
-  - [ ] Add notes for every sem.
+  - [x] Add notes for every sem.
+  - [x] Implement the Programming section.
   - [ ] Tweak Notes Page UI.
   - [ ] Implement Events Page
   - [ ] Implement Results page after Result API is created by the team
