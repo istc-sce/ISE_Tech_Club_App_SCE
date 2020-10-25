@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:isetechclub/data/question_parser.dart';
+import 'package:hive/hive.dart';
+import 'package:isetechclub/hive/hive_names.dart';
+import 'package:isetechclub/hive/load_hiveBox.dart';
 import 'package:isetechclub/tabs/questionsTab.dart';
+import 'package:isetechclub/topic_model/topic_model.dart';
 import 'package:tab_indicator_styler/tab_indicator_styler.dart';
 
 
@@ -11,6 +14,7 @@ class ProgrammingScreen extends StatefulWidget {
 
 class _ProgrammingScreenState extends State<ProgrammingScreen> {
 
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -20,12 +24,12 @@ class _ProgrammingScreenState extends State<ProgrammingScreen> {
           child: Scaffold(
             body: TabBarView(
               children: [
-                QuestionCreator(topicName: array,color: Colors.deepPurpleAccent,),
-                QuestionCreator(topicName: matrix,color: Colors.pinkAccent,),
-                QuestionCreator(topicName: string,color: Colors.cyan,),
-                QuestionCreator(topicName: linkedList,color: Colors.green,),
-                QuestionCreator(topicName: binaryTree,color: Colors.redAccent,),
-                QuestionCreator(topicName: bitManipulation,color: Colors.deepOrangeAccent,),
+                QuestionCreator(topicModel: array,hiveBox:HiveBoxes.array,color: Colors.cyan,),
+                QuestionCreator(topicModel: matrix,hiveBox:HiveBoxes.matrix,color: Colors.redAccent,),
+                QuestionCreator(topicModel: string,hiveBox:HiveBoxes.string,color: Colors.deepOrangeAccent,),
+                QuestionCreator(topicModel: linkedList,hiveBox:HiveBoxes.linkedList,color: Colors.green,),
+                QuestionCreator(topicModel: binaryTree,hiveBox:HiveBoxes.binaryTree,color: Colors.deepPurpleAccent,),
+                QuestionCreator(topicModel: bitManipulation,hiveBox:HiveBoxes.bitManipulation,color: Colors.pink,),
               ],
             ),
             backgroundColor: Color(0xff251293),

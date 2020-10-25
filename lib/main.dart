@@ -1,14 +1,25 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
 import 'package:isetechclub/contact.dart';
+import 'package:isetechclub/hive/hive_names.dart';
+import 'package:isetechclub/hive/question_model.dart';
 import 'package:isetechclub/programming.dart';
-import 'package:isetechclub/team.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
-
+import 'hive/load_hiveBox.dart';
 import 'homePage.dart';
 import 'notesScreen.dart';
 
-void main() {
+void main() async {
+  await Hive.initFlutter();
+  Hive.registerAdapter(QuestionModelAdapter());
+  await Hive.openBox<QuestionModel>(HiveBoxes.array);
+  await Hive.openBox<QuestionModel>(HiveBoxes.string);
+  await Hive.openBox<QuestionModel>(HiveBoxes.matrix);
+  await Hive.openBox<QuestionModel>(HiveBoxes.bitManipulation);
+  await Hive.openBox<QuestionModel>(HiveBoxes.binaryTree);
+  await Hive.openBox<QuestionModel>(HiveBoxes.linkedList);
   runApp(MyApp());
 }
 
@@ -17,10 +28,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home:MyHome(),
-    initialRoute: '/',
-    routes: {
-      '/notes': (context) => NotesScreen(),
-    });
+      theme: ThemeData(
+        unselectedWidgetColor: Colors.white,
+      ),
+    );
   }
 }
 
@@ -39,12 +50,17 @@ class _MyHomeState extends State<MyHome> {
   void initState() {
     super.initState();
     _pageController = PageController();
+    for(int i=0; i<14;i++)
+      loadBoxes();
   }
+
+
 
   @override
   void dispose() {
     _pageController.dispose();
     super.dispose();
+    Hive.close();
   }
 
   @override
@@ -73,10 +89,6 @@ class _MyHomeState extends State<MyHome> {
               icon: Icon(Icons.code,color: Colors.white,)
           ),
           BottomNavyBarItem(
-              title: Text('Team',style: TextStyle(color: Colors.white),),
-              icon: Icon(Icons.wc,color: Colors.white,)
-          ),
-          BottomNavyBarItem(
               title: Text('Contact',style: TextStyle(color: Colors.white),),
               icon: Icon(Icons.contact_page,color: Colors.white,)
           ),
@@ -93,7 +105,6 @@ class _MyHomeState extends State<MyHome> {
                     HomePage(),
                     NotesScreen(),
                     ProgrammingScreen(),
-                    TeamScreen(),
                     ContactPage(),
                   ],
                 ),

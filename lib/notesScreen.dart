@@ -84,18 +84,14 @@ Widget topCardWidget(String semester) {
     children: <Widget>[
       Text(
         'SEMESTER',
-        style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold,),
+        style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold,),
       ),
-      SizedBox(height: 20),
-      Container(
-        height: 70,
-        width: 100,
-        child: Center(
-          child: Text(
-            semester.toString(),
-            textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold,),
-          ),
+      SizedBox(height: 15),
+      Center(
+        child: Text(
+          semester.toString(),
+          textAlign: TextAlign.center,
+          style: TextStyle(color: Colors.white, fontSize: 26, fontWeight: FontWeight.bold,),
         ),
       ),
     ],
