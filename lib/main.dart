@@ -81,7 +81,7 @@ class _MyHomeState extends State<MyHome> {
               icon: Icon(Icons.home,color: Colors.white,)
           ),
           BottomNavyBarItem(
-              title: Text('Notes',style: TextStyle(color: Colors.white),),
+              title: Text('ISE Notes',style: TextStyle(color: Colors.white),),
               icon: Icon(Icons.note,color: Colors.white,)
           ),
           BottomNavyBarItem(

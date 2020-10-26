@@ -22,7 +22,8 @@ Tech Club application for the department.
   - [x] Contact Page
   - [x] Add notes for every sem.
   - [x] Implement the Programming section.
-  - [ ] Tweak Notes Page UI.
+  - [x] Tweak Notes Page UI.
+  - [x] Functionality to keep track of practiced questions.
   - [ ] Implement Events Page
   - [ ] Implement Results page after Result API is created by the team
 

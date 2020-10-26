@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:isetechclub/widgets/social_media_widget.dart';
 import 'package:isetechclub/widgets/textField.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -56,7 +58,7 @@ class _ContactPageState extends State<ContactPage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top:40, left: 20.0),
+                  padding: const EdgeInsets.only(top:20, left: 20.0),
                   child: Text('CONTACT US', style: TextStyle(color: Colors.black45,fontWeight: FontWeight.bold,fontSize: 30),),
                 ),
                 TextFieldWidget(label: 'Enter Name',controllerName: _nameControl,textInputType: TextInputType.name,),
@@ -66,6 +68,7 @@ class _ContactPageState extends State<ContactPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     RaisedButton(
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
                       padding: EdgeInsets.all(20),
                       child: Text('Contact us',style: TextStyle(color: Colors.white),),
                       color: Color(0xffFA949D),
@@ -73,6 +76,7 @@ class _ContactPageState extends State<ContactPage> {
                             sendMail();
                     }),
                     RaisedButton(
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
                         padding: EdgeInsets.all(20),
                         child: Text('Reset Form',style: TextStyle(color: Colors.white),),
                         color: Color(0xffFA949D),
@@ -82,7 +86,15 @@ class _ContactPageState extends State<ContactPage> {
                           _phoneControl.clear();
                         }),
                   ],
-                )
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SocialMediaWidget(faIcon: FontAwesomeIcons.linkedin,color: Colors.blue,link: 'https://www.linkedin.com/company/is-technical-club-sce',),
+                    SocialMediaWidget(faIcon: FontAwesomeIcons.instagram,color: Colors.pink,link: 'https://instagram.com/istcsce?igshid=1gsw2g4mh2qhu',),
+                    SocialMediaWidget(faIcon: FontAwesomeIcons.link,color: Colors.deepPurpleAccent,link: 'https://sce-tech-club.netlify.app/',),
+                  ],
+                ),
               ],
             ),
           ),

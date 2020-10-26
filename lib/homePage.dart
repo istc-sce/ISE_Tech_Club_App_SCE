@@ -4,11 +4,11 @@ import 'package:isetechclub/widgets/carousel.dart';
 
 // ignore: must_be_immutable
 class HomePage extends StatelessWidget {
-  List images = ['images/events.png', 'images/notes.png', 'images/results.png'];
+  List images = ['images/events.png', 'images/notes.png', 'images/programming.png'];
   List detailImage = [
     'Know about the latest events!',
     'Get online notes!',
-    'Get updates of VTU Results.'
+    'Practice Competitive Programming!'
   ];
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget {
                   aspectRatio: 2.0,
                   enlargeCenterPage: true,
                   enableInfiniteScroll: false,
-                  initialPage: 2,
+                  initialPage: 1,
                   autoPlay: true,
                 ),
                 items: imageSliders,
