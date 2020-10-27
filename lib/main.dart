@@ -1,4 +1,5 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:isetechclub/contact.dart';
@@ -7,11 +8,14 @@ import 'package:isetechclub/hive/question_model.dart';
 import 'package:isetechclub/programming.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
+import 'event_screen.dart';
 import 'hive/load_hiveBox.dart';
 import 'homePage.dart';
 import 'notesScreen.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   await Hive.initFlutter();
   Hive.registerAdapter(QuestionModelAdapter());
   await Hive.openBox<QuestionModel>(HiveBoxes.array);
@@ -85,6 +89,10 @@ class _MyHomeState extends State<MyHome> {
               icon: Icon(Icons.note,color: Colors.white,)
           ),
           BottomNavyBarItem(
+              title: Text('Events',style: TextStyle(color: Colors.white),),
+              icon: Icon(Icons.event,color: Colors.white,)
+          ),
+          BottomNavyBarItem(
               title: Text('Programming',style: TextStyle(color: Colors.white),),
               icon: Icon(Icons.code,color: Colors.white,)
           ),
@@ -104,6 +112,7 @@ class _MyHomeState extends State<MyHome> {
                   children:<Widget>[
                     HomePage(),
                     NotesScreen(),
+                    EventScreen(),
                     ProgrammingScreen(),
                     ContactPage(),
                   ],

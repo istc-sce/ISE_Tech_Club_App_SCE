@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
         .toList();
     return Column(
       children: [
-        Expanded(flex: 2, child: Image.asset('images/iseLogo.gif')),
+        Expanded(flex: 2, child: Image.asset('images/iseLogo.png')),
         Expanded(
           flex: 1,
           child: Container(
