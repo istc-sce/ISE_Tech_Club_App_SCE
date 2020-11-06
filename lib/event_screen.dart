@@ -26,7 +26,12 @@ class EventScreen extends StatelessWidget {
               child: StreamBuilder<QuerySnapshot>(
                   stream: databaseReference.collection("event").snapshots(),
                   builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
-                    if (!snapshot.hasData) return new Text("There is no expense");
+                    if (!snapshot.hasData) return
+                      new Center(
+                        child: Container(
+                          child: Image.asset('images/loading1.gif',height: 300,width: 300,),
+                        ),
+                      );
                     return new ListView(children: getEventData(snapshot));
                   }),
             ),

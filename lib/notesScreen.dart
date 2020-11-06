@@ -14,10 +14,6 @@ class _NotesScreenState extends State<NotesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 1,
-        backgroundColor: Colors.transparent,
-      ),
       backgroundColor: Colors.black,
       body: StreamBuilder(
         initialData: false,
@@ -129,7 +125,7 @@ List<Widget> createChildren(List subjects,List url) {
           child: Text(
               subjects[index].toString(),
             textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 16),
+            style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 20),
           ),
         ),
         Divider(

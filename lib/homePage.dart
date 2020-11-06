@@ -21,42 +21,43 @@ class HomePage extends StatelessWidget {
         .toList();
     final _random = new Random();
     var element = quotes[_random.nextInt(quotes.length)];
-    return Column(
+    return ListView(
       children: [
-        Expanded(flex: 1, child: Image.asset('images/iseLogo.png')),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal:28.0),
-          child: Divider(color: Colors.white,),
+        Image.asset('images/iseLogo.png',height: MediaQuery.of(context).size.height/2.5,),
+        Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal:28.0),
+              child: Divider(color: Colors.white,),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 40.0,vertical: 8),
+              child: Text(element,style: TextStyle(color: Colors.white, fontSize: 30,fontFamily: 'Kaushan'),textAlign: TextAlign.center,),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 40.0),
+              child: Align(alignment:Alignment.centerRight,child: Text(authors[quotes.indexOf(element)],style: TextStyle(color: Colors.white, fontSize: 30,fontFamily: 'Kaushan'),textAlign: TextAlign.center,)),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal:28.0,vertical: 8),
+              child: Divider(color: Colors.white,),
+            ),
+          ],
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 40.0,vertical: 8),
-          child: Text(element,style: TextStyle(color: Colors.white, fontSize: 30,fontFamily: 'Kaushan'),textAlign: TextAlign.center,),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 40.0),
-          child: Align(alignment:Alignment.centerRight,child: Text(authors[quotes.indexOf(element)],style: TextStyle(color: Colors.white, fontSize: 30,fontFamily: 'Kaushan'),textAlign: TextAlign.center,)),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal:28.0),
-          child: Divider(color: Colors.white,),
-        ),
-        Expanded(
-          flex: 1,
-          child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
+        Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: CarouselSlider(
+              options: CarouselOptions(
+                aspectRatio: 2.0,
+                enlargeCenterPage: true,
+                enableInfiniteScroll: false,
+                initialPage: 1,
+                autoPlay: true,
               ),
-              child: CarouselSlider(
-                options: CarouselOptions(
-                  aspectRatio: 2.0,
-                  enlargeCenterPage: true,
-                  enableInfiniteScroll: false,
-                  initialPage: 1,
-                  autoPlay: true,
-                ),
-                items: imageSliders,
-              )
-          ),
+              items: imageSliders,
+            )
         ),
       ],
     );
