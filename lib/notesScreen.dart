@@ -14,7 +14,11 @@ class _NotesScreenState extends State<NotesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff251293),
+      appBar: AppBar(
+        toolbarHeight: 1,
+        backgroundColor: Colors.transparent,
+      ),
+      backgroundColor: Colors.black,
       body: StreamBuilder(
         initialData: false,
         stream: slimyCard.stream,
@@ -24,48 +28,56 @@ class _NotesScreenState extends State<NotesScreen> {
             children: <Widget>[
               SizedBox(height: 100),
               SlimyCard(
+                color: Colors.white,
                 topCardHeight:200,
                 topCardWidget: topCardWidget(physicsCycle.semester),
                 bottomCardWidget: bottomCardWidget(physicsCycle.subjectNames,physicsCycle.pdfURL),
               ),
               SizedBox(height: 30),
               SlimyCard(
+                color: Colors.white,
                 topCardHeight:200,
                 topCardWidget: topCardWidget(chemistryCycle.semester),
                 bottomCardWidget: bottomCardWidget(chemistryCycle.subjectNames,chemistryCycle.pdfURL),
               ),
               SizedBox(height: 30),
               SlimyCard(
+                color: Colors.white,
                 topCardHeight:200,
                 topCardWidget: topCardWidget(thirdSem.semester),
                 bottomCardWidget: bottomCardWidget(thirdSem.subjectNames,thirdSem.pdfURL),
               ),
               SizedBox(height: 30),
               SlimyCard(
+                color: Colors.white,
                 topCardHeight:200,
                 topCardWidget: topCardWidget(fourthSem.semester),
                 bottomCardWidget: bottomCardWidget(fourthSem.subjectNames,fourthSem.pdfURL),
               ),
               SizedBox(height: 30),
               SlimyCard(
+                color: Colors.white,
                 topCardHeight:200,
                 topCardWidget: topCardWidget(fifthSem.semester),
                 bottomCardWidget: bottomCardWidget(fifthSem.subjectNames,fifthSem.pdfURL),
               ),
               SizedBox(height: 30),
               SlimyCard(
+                color: Colors.white,
                 topCardHeight:200,
                 topCardWidget: topCardWidget(sixthSem.semester),
                 bottomCardWidget: bottomCardWidget(sixthSem.subjectNames,sixthSem.pdfURL),
               ),
               SizedBox(height: 30),
               SlimyCard(
+                color: Colors.white,
                 topCardHeight:200,
                 topCardWidget: topCardWidget(seventhSem.semester),
                 bottomCardWidget: bottomCardWidget(seventhSem.subjectNames,seventhSem.pdfURL),
               ),
               SizedBox(height: 30),
               SlimyCard(
+                color: Colors.white,
                 topCardHeight:200,
                 topCardWidget: topCardWidget(eigthSem.semester),
                 bottomCardWidget: bottomCardWidget(eigthSem.subjectNames,eigthSem.pdfURL),
@@ -84,14 +96,14 @@ Widget topCardWidget(String semester) {
     children: <Widget>[
       Text(
         'SEMESTER',
-        style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold,),
+        style: TextStyle(color: Colors.black, fontSize: 22, fontWeight: FontWeight.bold,),
       ),
       SizedBox(height: 15),
       Center(
         child: Text(
           semester.toString(),
           textAlign: TextAlign.center,
-          style: TextStyle(color: Colors.white, fontSize: 26, fontWeight: FontWeight.bold,),
+          style: TextStyle(color: Colors.black, fontSize: 26, fontWeight: FontWeight.bold,),
         ),
       ),
     ],
@@ -117,11 +129,11 @@ List<Widget> createChildren(List subjects,List url) {
           child: Text(
               subjects[index].toString(),
             textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 16),
+            style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 16),
           ),
         ),
         Divider(
-          color: Colors.white70,
+          color: Colors.black,
         ),
       ],
     );

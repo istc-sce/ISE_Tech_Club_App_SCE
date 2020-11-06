@@ -45,7 +45,7 @@ class _ContactPageState extends State<ContactPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xff251293),
+        backgroundColor: Colors.black,
         body: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Container(

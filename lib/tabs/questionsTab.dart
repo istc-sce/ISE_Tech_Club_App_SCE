@@ -35,7 +35,7 @@ class _QuestionCreatorState extends State<QuestionCreator> {
   Widget build(BuildContext context) {
     bool alertVisibility = false;
     return Scaffold(
-      backgroundColor: Color(0xff251293),
+      backgroundColor: Colors.black,
       body: ValueListenableBuilder(
         valueListenable: Hive.box<QuestionModel>(widget.hiveBox).listenable(),
               builder: (context, Box<QuestionModel> box, _) {
@@ -66,7 +66,7 @@ class _QuestionCreatorState extends State<QuestionCreator> {
                             height: 60,
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                             child: Icon(Icons.arrow_forward_ios,color: Colors.white70,),
-                            color: Colors.deepPurpleAccent,
+                            color: Colors.black,
                             onPressed: () {
                               loadBoxes();
                               Hive.box<QuestionModel>(widget.hiveBox).getAt(0).isChecked[0] = false;
@@ -85,9 +85,9 @@ class _QuestionCreatorState extends State<QuestionCreator> {
                         totalSteps: widget.topicModel.questionName.length,
                         currentStep: Hive.box<QuestionModel>(widget.hiveBox).values.where((element) => element.isChecked.contains(true)).length,
                         size: 36,
-                        selectedColor: Colors.black,
+                        selectedColor: Colors.green,
                         unselectedColor: Colors.grey[200],
-                        customStep: (index, color, _) => color == Colors.black
+                        customStep: (index, color, _) => color == Colors.green
                             ? Container(
                           color: color,
                           child: Icon(

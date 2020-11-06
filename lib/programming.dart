@@ -32,12 +32,12 @@ class _ProgrammingScreenState extends State<ProgrammingScreen> {
                 QuestionCreator(topicModel: bitManipulation,hiveBox:HiveBoxes.bitManipulation,color: Colors.pink,),
               ],
             ),
-            backgroundColor: Color(0xff251293),
+            backgroundColor: Colors.black,
             appBar: AppBar(
-              backgroundColor: Color(0xff251293),
+              backgroundColor: Colors.black,
               elevation: 0,
               flexibleSpace: Padding(
-                padding: const EdgeInsets.only(top:12.0,left: 12),
+                padding: const EdgeInsets.only(top:12.0,left: 40),
                 child: TabBar(
                   isScrollable: true,
                   tabs: [
