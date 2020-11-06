@@ -6,11 +6,15 @@ Tech Club application for the department.
 ## Screenshots
 
 ## Home Page
-[![Screenshot-129.png](https://i.postimg.cc/7hk5K9DQ/Screenshot-129.png)](https://postimg.cc/bDmYJQZQ)
+[![Whats-App-Image-2020-11-06-at-3-52-44-PM.jpg](https://i.postimg.cc/XYcK4Ch4/Whats-App-Image-2020-11-06-at-3-52-44-PM.jpg)](https://postimg.cc/xX8NPcn4)
 ## Notes Page
-[![Screenshot-130.png](https://i.postimg.cc/SRfJ39xQ/Screenshot-130.png)](https://postimg.cc/rRzVtK47)
+[![Whats-App-Image-2020-11-06-at-3-52-44-PM-1.jpg](https://i.postimg.cc/KcwDNFBS/Whats-App-Image-2020-11-06-at-3-52-44-PM-1.jpg)](https://postimg.cc/XXK5jRsQ)
+## Programming Page
+[![Whats-App-Image-2020-11-06-at-3-52-44-PM-2.jpg](https://i.postimg.cc/XY0KR8ss/Whats-App-Image-2020-11-06-at-3-52-44-PM-2.jpg)](https://postimg.cc/VdDbMjQt)
+## Programming Page
+[![Whats-App-Image-2020-11-06-at-3-52-44-PM-3.jpg](https://i.postimg.cc/RVtQp8L3/Whats-App-Image-2020-11-06-at-3-52-44-PM-3.jpg)](https://postimg.cc/8j16jZ3D)
 ## Contact Page
-[![Screenshot-132.png](https://i.postimg.cc/gkGwRggx/Screenshot-132.png)](https://postimg.cc/DmYy3Pkh)
+[![Whats-App-Image-2020-11-06-at-3-54-38-PM.jpg](https://i.postimg.cc/3NFrd3H4/Whats-App-Image-2020-11-06-at-3-54-38-PM.jpg)](https://postimg.cc/PvNn7sJT)
 
 ## Tech/framework used
 
@@ -24,6 +28,5 @@ Tech Club application for the department.
   - [x] Implement the Programming section.
   - [x] Tweak Notes Page UI.
   - [x] Functionality to keep track of practiced questions.
-  - [ ] Implement Events Page
-  - [ ] Implement Results page after Result API is created by the team
-
+  - [x] Implement Events Page
+ 
